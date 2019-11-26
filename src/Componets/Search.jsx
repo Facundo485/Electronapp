@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';
@@ -21,13 +21,16 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function WordForm() {
+export default function WordForm(props) {
   const classes = useStyles();
+  const [word, setWord] = useState(props.word);
 
   return (
     <Paper component="form" className={classes.root}>
       <InputBase
         className={classes.input}
+        value = {word}
+        onChange={e => setWord(e.target.value)}
         type="text"
         placeholder="Search"
         inputProps={{ 'aria-label': 'word' }}

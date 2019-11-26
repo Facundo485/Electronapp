@@ -6,16 +6,16 @@ import Logo from '../logo_la_granja.png';
 
 
 class App extends React.Component {
-    render() {
-      return (
-        <div className = "form">
-            <WordForm/>
-            <div className = "Muni">
-                <img src={Logo}/>
-            </div>
+  render() {
+    return (
+      <div className = "form">
+        <div className = "muni">
+          <img src={Logo}/>
         </div>
-      );
-    }
+        <WordForm/>
+      </div>
+    );
   }
+}
 
 export default App;

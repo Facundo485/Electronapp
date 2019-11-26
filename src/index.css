@@ -17,9 +17,9 @@ form {
   margin-top: 30px;
 }
 
-.Muni {
-  width: 20%;
-  margin: auto;
+.muni {
+  display: flex;
+  justify-content: center;
 }
 
 html, #root>div {
